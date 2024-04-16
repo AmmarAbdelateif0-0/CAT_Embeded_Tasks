@@ -8,10 +8,11 @@
 #ifndef DIO_PRIVATE_H_
 #define DIO_PRIVATE_H_
 
+#define DIO_MASK_BIT    1
 #define INPUT           0
 #define OUTPUT          1
 
-#define LOW             0
+#define LOW             0                                    
 #define HIGH            1
 #define PULL_UP         1
 #define FLOAT  	        0
