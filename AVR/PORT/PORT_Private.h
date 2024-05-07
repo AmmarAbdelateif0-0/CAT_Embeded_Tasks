@@ -1,0 +1,35 @@
+/*
+ * PORT_Private.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: aboam
+ */
+
+#ifndef PORT_PRIVATE_H_
+#define PORT_PRIVATE_H_
+
+#define OUTPUT   1
+#define INPUT    0
+
+#define LOW             0
+#define HIGH            1
+#define PULL_UP         1
+#define FLOAT  	        0
+
+#define CONC(b7,b6,b5,b4,b3,b2,b1,b0)       CONC_Help(b7,b6,b5,b4,b3,b2,b1,b0)
+#define CONC_Help(b7,b6,b5,b4,b3,b2,b1,b0)  0b##b7##b6##b5##b4##b3##b2##b1##b0
+
+
+#define  PORTA_DIR	CONC(PORTA_Pin7_Dir,PORTA_Pin6_Dir,PORTA_Pin5_Dir,PORTA_Pin4_Dir,PORTA_Pin3_Dir,PORTA_Pin2_Dir,PORTA_Pin1_Dir,PORTA_Pin0_Dir)
+#define  PORTB_DIR	CONC(PORTB_Pin7_Dir,PORTB_Pin6_Dir,PORTB_Pin5_Dir,PORTB_Pin4_Dir,PORTB_Pin3_Dir,PORTB_Pin2_Dir,PORTB_Pin1_Dir,PORTB_Pin0_Dir)
+#define  PORTC_DIR	CONC(PORTC_Pin7_Dir,PORTC_Pin6_Dir,PORTC_Pin5_Dir,PORTC_Pin4_Dir,PORTC_Pin3_Dir,PORTC_Pin2_Dir,PORTC_Pin1_Dir,PORTC_Pin0_Dir)
+#define	 PORTD_DIR 	CONC(PORTD_Pin7_Dir,PORTD_Pin6_Dir,PORTD_Pin5_Dir,PORTD_Pin4_Dir,PORTD_Pin3_Dir,PORTD_Pin2_Dir,PORTD_Pin1_Dir,PORTD_Pin0_Dir)
+
+
+#define  PORTA_INTIAL_VALUE CONC(PORTA_Pin7_VAL,PORTA_Pin6_VAL,PORTA_Pin5_VAL,PORTA_Pin4_VAL,PORTA_Pin3_VAL,PORTA_Pin2_VAL,PORTA_Pin1_VAL,PORTA_Pin0_VAL)
+#define  PORTB_INTIAL_VALUE CONC(PORTB_Pin7_VAL,PORTB_Pin6_VAL,PORTB_Pin5_VAL,PORTB_Pin4_VAL,PORTB_Pin3_VAL,PORTB_Pin2_VAL,PORTB_Pin1_VAL,PORTB_Pin0_VAL)
+#define  PORTC_INTIAL_VALUE CONC(PORTC_Pin7_VAL,PORTC_Pin6_VAL,PORTC_Pin5_VAL,PORTC_Pin4_VAL,PORTC_Pin3_VAL,PORTC_Pin2_VAL,PORTC_Pin1_VAL,PORTC_Pin0_VAL)
+#define	 PORTD_INTIAL_VALUE CONC(PORTD_Pin7_VAL,PORTD_Pin6_VAL,PORTD_Pin5_VAL,PORTD_Pin4_VAL,PORTD_Pin3_VAL,PORTD_Pin2_VAL,PORTD_Pin1_VAL,PORTD_Pin0_VAL)
+
+
+#endif /* PORT_PRIVATE_H_ */
